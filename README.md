@@ -79,7 +79,7 @@ travels-app/
 
 ## 🤝 Contribución
 
-Este proyecto fue desarrollado en colaboración con [@DFCH9503](https://github.com/DFCH9503).
+Este proyecto fue desarrollado en colaboración con [@DFCH9503](https://github.com/DFCH9503). prueba
 
 Para contribuir al proyecto:
 
