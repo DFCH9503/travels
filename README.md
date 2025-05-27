@@ -45,7 +45,7 @@ Travels App es una plataforma web moderna para la reserva de vuelos, hoteles y p
 
 1. Clonar el repositorio
 ```bash
-git clone https://github.com/tu-usuario/travels-app.git
+git clone https://github.com/DFCH9503/travels-app.git
 cd travels-app
 ```
 
