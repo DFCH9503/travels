@@ -27,18 +27,10 @@ Travels App es una plataforma web moderna para la reserva de vuelos, hoteles y p
 - TypeScript
 - Tailwind CSS
 - React Query
-- Zustand (Gestión de estado)
-- React Hook Form
-- Zod (Validación)
 - Shadcn/ui (Componentes)
 
 ### Backend
-- Node.js
-- Express.js
-- PostgreSQL
-- Prisma (ORM)
-- JWT (Autenticación)
-- Redis (Caché)
+- 
 
 ### DevOps & Herramientas
 - Docker
