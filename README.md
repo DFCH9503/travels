@@ -30,7 +30,7 @@ Travels App es una plataforma web moderna para la reserva de vuelos, hoteles y p
 - Shadcn/ui (Componentes)
 
 ### Backend
-- 
+- Python (FastAPI)
 
 ### DevOps & Herramientas
 - Docker
