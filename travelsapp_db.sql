@@ -1,6 +1,5 @@
-
 -- ==============================
--- Database Schema for Travel Booking App
+-- Database Schema for Travels - App
 -- ==============================
 
 -- Drop tables if they exist
@@ -38,6 +37,20 @@ CREATE TABLE airlines (
     airline_id SERIAL PRIMARY KEY,
     name VARCHAR(150) NOT NULL
 );
+
+-- Table: Fligths
+CREATE TABLE flights (
+    flight_id SERIAL PRIMARY KEY,
+    airline_id INT REFERENCES airlines(airline_id),
+    origin_city_id INT REFERENCES cities(city_id),
+    destination_city_id INT REFERENCES cities(city_id),
+    departure_time TIMESTAMP,
+    arrival_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    price DECIMAL(10, 2),
+    total_seats INT CHECK (total_seats > 0),
+    available_seats INT CHECK (available_seats >= 0 AND available_seats <= total_seats)
+);
+
 
 -- Sample Data Insertion
 
@@ -79,3 +92,23 @@ INSERT INTO hotel_rooms (hotel_id, room_type, price_per_night, available) VALUES
 (6, 'Suite', 450000, TRUE),
 (7, 'Suite', 150000, TRUE),
 (7, 'Double', 350000, TRUE);
+
+-- Flights
+INSERT INTO flights (
+    airline_id, origin_city_id, destination_city_id,
+    departure_time, arrival_time, price, total_seats, available_seats
+) VALUES
+-- Bogotá to Medellín
+(1, 1, 2, '2025-06-10 08:00:00', '2025-06-10 09:00:00', 250000, 150, 150),
+-- Medellín to Cartagena
+(2, 2, 3, '2025-06-11 10:30:00', '2025-06-11 12:00:00', 320000, 120, 100),
+-- Cartagena to Cali
+(3, 3, 4, '2025-06-12 13:00:00', '2025-06-12 15:00:00', 280000, 100, 85),
+-- Cali to Barranquilla
+(4, 4, 5, '2025-06-13 07:00:00', '2025-06-13 09:00:00', 300000, 110, 110),
+-- Barranquilla to Santa Marta
+(1, 5, 6, '2025-06-14 17:00:00', '2025-06-14 17:45:00', 180000, 80, 70),
+-- Santa Marta to Bogotá
+(2, 6, 1, '2025-06-15 19:00:00', '2025-06-15 21:00:00', 260000, 140, 135),
+-- Santa Marta to Bucaramanga
+(3, 6, 7, '2025-06-15 14:00:00', '2025-06-15 20:00:00', 280000, 120, 115);
