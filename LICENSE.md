@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2024 Raul Parada, Daniel Chaparro
+Copyright (c) 2025 Raul Parada, Daniel Chaparro
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
